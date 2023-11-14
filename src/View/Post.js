@@ -39,7 +39,7 @@ class Post extends Component {
   render() {
     return (
       <div>
-        <h2>O Barreiro está mais ON que nunca!</h2>
+        <h2 className='vinda'>O Barreiro está mais ON que nunca!</h2>
         <textarea
           className='rounded-textbox'
           value={this.state.message}

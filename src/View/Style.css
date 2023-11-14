@@ -31,7 +31,7 @@
   font-size: 16px;
   cursor: pointer;
   position: fixed; /* Alterado para relativo */
-  top: 245px; /* Ajuste conforme necessário */
+  top: 175px; /* Ajuste conforme necessário */
   left: 420px; /* Ajuste conforme necessário */
   z-index: 1;
 }
@@ -323,7 +323,7 @@ input {
   border-radius: none;
   cursor: pointer;
   position: fixed;
-  top: 245px;
+  top: 175px;
   left: 840px;
   z-index: 1;
 }
@@ -361,3 +361,8 @@ input {
   top: 100px; /* Remova essa propriedade ou ajuste conforme necessário */
 }
 
+.vinda {
+  position: fixed;
+  top: 50px;
+  left: 480px;
+}
