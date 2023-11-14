@@ -4,6 +4,10 @@
     color: red; /* Cor do texto vermelho */
     -webkit-text-stroke: 2px black; /* Contorno preto de 2 pixels */
     text-stroke: 2px black; /* Contorno preto de 2 pixels */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999; /* Garante que o logotipo fique acima de outros elementos */
   }
 
   /* Defina a cor de fundo e a cor do texto para o botão */
@@ -18,19 +22,19 @@
     width: 250px; /* Adicione o tamanho desejado */
 }
   
-  .bt_post {
-    background-color: #272197; /* Cor de fundo azul do Twitter */
-    color: rgb(255, 255, 255); /* Cor do texto branca */
-    border: none;
-    border-radius: 999px; /* Cria uma forma arredondada para o botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    font-size: 16px;
-    cursor: pointer;
-    position: absolute;
-    top: 210px;
-    left: 865px;
-    z-index: 1;
-  }
+.bt_post {
+  background-color: #272197;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed; /* Alterado para relativo */
+  top: 245px; /* Ajuste conforme necessário */
+  left: 420px; /* Ajuste conforme necessário */
+  z-index: 1;
+}
 
   .bt_post:hover {
     background-color: #0c364d; /* Cor de fundo azul mais escura no hover */
@@ -80,6 +84,7 @@
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s, border-radius 0.3s; /* Adiciona uma transição suave de 0.3 segundos para a mudança de cor e arredondamento */
+    margin: 10px auto;
   }
   
   /* Estilize o botão quando o mouse passar sobre ele */
@@ -143,6 +148,8 @@ input {
   width: 500px; /* Ajuste a largura conforme necessário */
   outline: none;
   resize: none; /* Desativa o redimensionamento da caixa de texto */
+  position: fixed;
+  left: 420px;
 }
 
 
@@ -156,20 +163,34 @@ input {
   width: 17%;
   float: left;
   background-color: #1a5d93;
+  position: fixed;
+  top: 200px;
+  left: 1px;
+  top: 100px;
 }
 
 .center-column {
-  width: 61%;
+  width: 58.2%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centralize horizontalmente o conteúdo dentro da coluna */
+  align-items: center;
   background-color: blueviolet;
+  position: fixed;
+  right: 330px;
+  top: 100px;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+  padding: 20px; /* Adiciona algum espaço interno para o conteúdo */
 }
+
 
 .right-column {
   width: 22%;
   float: right;
   background-color: chartreuse;
+  position: fixed;
+  right: 1px;
+  top: 100px;
 }
 
 /* Estilização para os botões */
@@ -227,6 +248,10 @@ input {
   width: 11%;
   font-size: 14px;
   padding: 2%;
+  position: fixed;
+  top: 200px;
+  left: -20px;
+  top: 645px;
 }
 .rodape a{
   text-decoration: none;
@@ -288,23 +313,51 @@ input {
   margin-right: 10px; /* Espaçamento entre os rótulos */
 }
 
-/* Estilo para o contêiner do botão */
-        .custom-file-upload {
-            display: inline-block;
-            padding: 1px 1px;
-            background-color: #ffffff;
-            color: rgb(4, 0, 0);
-            border: none;
-            border-radius: none;
-            cursor: pointer;
-            position: absolute;
-            top: 210px;
-            left: 450px;
-            z-index: 1;
-        }
+/* Estilização para o contêiner do botão de upload */
+.custom-file-upload {
+  display: inline-block;
+  padding: 1px 1px;
+  background-color: #ffffff;
+  color: rgb(4, 0, 0);
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+  position: fixed;
+  top: 245px;
+  left: 840px;
+  z-index: 1;
+}
 
-        /* Estilização para o campo de entrada de arquivo oculto */
-        .custom-file-upload input[type="file"] {
-            display: none;
-        }
+ /* Estilização para o campo de entrada de arquivo oculto */
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+
+
+/* Seu arquivo de estilo global ou local */
+
+/* Estilização para o botão de exclusão */
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-left: 10px; /* Adicione margem à esquerda para separar do nome do arquivo */
+  position:fixed;
+  top: 280px;
+}
+
+/* Estilização para as imagens e vídeos dentro da classe file-info */
+.file-info img,
+.file-info video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  position: relative; /* Remova a propriedade 'position: relative;' */
+  top: 100px; /* Remova essa propriedade ou ajuste conforme necessário */
+}
 

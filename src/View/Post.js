@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
+import './Style.css';
 
 class Post extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      files: [],        // Para armazenar os arquivos carregados
-      message: '',      // Para armazenar a mensagem da postagem
+      files: [], // Para armazenar os arquivos carregados
+      message: '', // Para armazenar a mensagem da postagem
     };
   }
 
@@ -19,7 +20,7 @@ class Post extends Component {
   }
 
   savePost = () => {
-    // Você pode implementar a lógica para salvar a postagem no servidor aqui
+    // Implemente a lógica para salvar a postagem no servidor aqui
     // Envie this.state.files, this.state.message e outros dados da postagem para o servidor
 
     // Limpe o estado após salvar
@@ -39,7 +40,8 @@ class Post extends Component {
     return (
       <div>
         <h2>O Barreiro está mais ON que nunca!</h2>
-        <textarea className='rounded-textbox'
+        <textarea
+          className='rounded-textbox'
           value={this.state.message}
           onChange={this.handleTextChange}
           placeholder="Escreva sua postagem"
@@ -48,9 +50,9 @@ class Post extends Component {
           {({ getRootProps, getInputProps }) => (
             <div {...getRootProps()} className="dropzone">
               <input {...getInputProps()} />
-              <label class="custom-file-upload">
-                  <input type="file" />
-                  Inserir Arquivo
+              <label className="custom-file-upload">
+                <input type="file" />
+                Inserir Arquivo
               </label>
             </div>
           )}
@@ -58,33 +60,44 @@ class Post extends Component {
         <ul>
           {this.state.files.map((file, index) => (
             <p key={index}>
-              {file.name} - {file.size} bytes
-              <button onClick={() => this.deleteFile(index)}>Excluir</button>
-              <br />
-              {file.type.startsWith('image/') && (
-                <img src={URL.createObjectURL(file)} alt="Imagem" style={{ maxWidth: '100%' }} />
-              )}
-              {file.type.startsWith('video/') && (
-                <video controls style={{ maxWidth: '100%' }}>
-                  <source src={URL.createObjectURL(file)} type={file.type} />
-                  Seu navegador não suporta a exibição deste vídeo.
-                </video>
-              )}
-              {file.name.endsWith('.pdf') && (
-                <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
-                  Visualizar PDF
-                </a>
-              )}
-              {file.name.endsWith('.docx') && (
-                <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
-                  Visualizar documento Word
-                </a>
-              )}
-              {file.name.endsWith('.xlsx') && (
-                <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
-                  Visualizar documento Excel
-                </a>
-              )}
+              <span className='file-info'>
+                
+                <button className='delete-button' onClick={() => this.deleteFile(index)}>Excluir</button>
+                <br />
+                {file.type.startsWith('image/') && (
+                  <img
+                    src={URL.createObjectURL(file)}
+                    alt="Imagem"
+                    // Remova a classe post-image
+                    style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '10px auto' }}
+                  />
+                )}
+
+                {file.type.startsWith('video/') && (
+                  <video
+                    controls
+                    style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '10px auto' }}
+                  >
+                    <source src={URL.createObjectURL(file)} type={file.type} />
+                    Seu navegador não suporta a exibição deste vídeo.
+                  </video>
+                )}
+                {file.name.endsWith('.pdf') && (
+                  <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
+                    Visualizar PDF
+                  </a>
+                )}
+                {file.name.endsWith('.docx') && (
+                  <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
+                    Visualizar documento Word
+                  </a>
+                )}
+                {file.name.endsWith('.xlsx') && (
+                  <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
+                    Visualizar documento Excel
+                  </a>
+                )}
+              </span>
             </p>
           ))}
         </ul>

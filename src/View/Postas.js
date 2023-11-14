@@ -19,7 +19,7 @@ class Postas extends Component {
 
   render() {
     return (
-      <div>      
+      <div>
         <div className="center-column">
           {/* Componente para criar uma nova postagem */}
           <Post onAddPost={this.addPost} />
@@ -29,40 +29,36 @@ class Postas extends Component {
             {this.state.posts.map((post, index) => (
               <p key={index}>
                 <div>{post.message}</div>
-                <ul>
+                {/* Renderiza os arquivos */}
                 {post.files.map((file, fileIndex) => (
-                    <p key={fileIndex}>
-                      {/* Remova a linha abaixo para não exibir o nome e tamanho do arquivo */}
-                      {/* {file.name} - {file.size} bytes */}
-                      <br />
-                      {file.type.startsWith('image/') && (
-                        <img src={URL.createObjectURL(file)} alt="Imagem" style={{ maxWidth: '100%' }} />
-                      )}
-                      {file.type.startsWith('video/') && (
-                        <video controls style={{ maxWidth: '100%' }}>
-                          <source src={URL.createObjectURL(file)} type={file.type} />
-                          Seu navegador não suporta a exibição deste vídeo.
-                        </video>
-                      )}
-                      {file.name.endsWith('.pdf') && (
-                        <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
-                          Visualizar PDF
-                        </a>
-                      )}
-                      {file.name.endsWith('.docx') && (
-                        <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
-                          Visualizar documento Word
-                        </a>
-                      )}
-                      {file.name.endsWith('.xlsx') && (
-                        <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
-                          Visualizar documento Excel
-                        </a>
-                      )}
-                    </p>
-                  ))}
-
-                </ul>
+                  <div key={fileIndex} className="file-info">
+                    <br />
+                    {file.type.startsWith('image/') && (
+                      <img src={URL.createObjectURL(file)} alt="Imagem" style={{ maxWidth: '70%' }} />
+                    )}
+                    {file.type.startsWith('video/') && (
+                      <video controls style={{ maxWidth: '70%' }}>
+                        <source src={URL.createObjectURL(file)} type={file.type} />
+                        Seu navegador não suporta a exibição deste vídeo.
+                      </video>
+                    )}
+                    {file.name.endsWith('.pdf') && (
+                      <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
+                        Visualizar PDF
+                      </a>
+                    )}
+                    {file.name.endsWith('.docx') && (
+                      <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
+                        Visualizar documento Word
+                      </a>
+                    )}
+                    {file.name.endsWith('.xlsx') && (
+                      <a href={URL.createObjectURL(file)} target="_blank" rel="noopener noreferrer">
+                        Visualizar documento Excel
+                      </a>
+                    )}
+                  </div>
+                ))}
               </p>
             ))}
           </ul>
