@@ -1,0 +1,310 @@
+.barreiro-on {
+    font-family: 'Garamond', serif;
+    font-size: 36px;
+    color: red; /* Cor do texto vermelho */
+    -webkit-text-stroke: 2px black; /* Contorno preto de 2 pixels */
+    text-stroke: 2px black; /* Contorno preto de 2 pixels */
+  }
+
+  /* Defina a cor de fundo e a cor do texto para o botão */
+  .tw-button {
+    background-color: #ffffff; /* Cor de fundo azul do Twitter */
+    color: rgb(11, 0, 0); /* Cor do texto branca */
+    border: none;
+    border-radius: 999px; /* Cria uma forma arredondada para o botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 16px;
+    cursor: pointer;
+    width: 250px; /* Adicione o tamanho desejado */
+}
+  
+  .bt_post {
+    background-color: #272197; /* Cor de fundo azul do Twitter */
+    color: rgb(255, 255, 255); /* Cor do texto branca */
+    border: none;
+    border-radius: 999px; /* Cria uma forma arredondada para o botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 210px;
+    left: 865px;
+    z-index: 1;
+  }
+
+  .bt_post:hover {
+    background-color: #0c364d; /* Cor de fundo azul mais escura no hover */
+    color: #ffffff;
+  }
+  
+  /* Estilize o botão quando ele for clicado */
+  .bt_post:active {
+    background-color: #05111b; /* Cor de fundo azul mais escura no clique */
+  }
+
+  /* Estilize o botão quando o mouse passar sobre ele */
+  .tw-button:hover {
+    background-color: #0c364d; /* Cor de fundo azul mais escura no hover */
+    color: #ffffff;
+  }
+  
+  /* Estilize o botão quando ele for clicado */
+  .tw-button:active {
+    background-color: #05111b; /* Cor de fundo azul mais escura no clique */
+  }
+
+  /* Estilize o botão de chat */
+.chat-button {
+    background-color: white; /* Cor de fundo branca */
+    color: black; /* Cor do texto preta */
+    border: none;
+    border-radius: 50%; /* Cria uma forma circular para o botão */
+    padding: 20px; /* Espaçamento interno do botão */
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Adiciona uma transição suave de 0.3 segundos para a animação */
+  }
+  
+  /* Estilize o botão quando o mouse passar sobre ele */
+  .chat-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% no hover */
+  }
+  
+/* Estilize o botão de "Seguir" */
+.tw-follow-button {
+    background-color: #888; /* Cor de fundo cinza inicial */
+    color: white; /* Cor do texto branca */
+    border: none;
+    border-radius: 0; /* Inicialmente reto (não arredondado) */
+    padding: 2px 4px; /* Tamanho do botão pequeno */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-radius 0.3s; /* Adiciona uma transição suave de 0.3 segundos para a mudança de cor e arredondamento */
+  }
+  
+  /* Estilize o botão quando o mouse passar sobre ele */
+  .tw-follow-button:hover {
+    background-color: #aea0a0; /* Cor de fundo vermelho no hover */
+  }
+  
+/*Botão de procura*/
+
+.search-container {
+  display: inline-block;
+}
+
+.tw-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 5px;
+  background-color: #fff;
+}
+
+input {
+  flex: 1;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  outline: none;
+}
+
+.search-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #1a5d93;
+}
+
+
+/*Para textbox de publicar*/
+.rounded-textbox {
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Ajuste o valor conforme necessário para controlar o grau de arredondamento */
+  padding: 10px;
+  width: 500px; /* Ajuste a largura conforme necessário */
+  outline: none;
+  resize: none; /* Desativa o redimensionamento da caixa de texto */
+}
+
+
+/* Coluna esquerda e para direita*/
+.container {
+  display: flex;
+  justify-content: space-between; /* Espaço entre as colunas */
+}
+
+.left-column {
+  width: 17%;
+  float: left;
+  background-color: #1a5d93;
+}
+
+.center-column {
+  width: 61%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centralize horizontalmente o conteúdo dentro da coluna */
+  background-color: blueviolet;
+}
+
+.right-column {
+  width: 22%;
+  float: right;
+  background-color: chartreuse;
+}
+
+/* Estilização para os botões */
+.tw-button, .label {
+  display: block;
+  margin: 5px 0; /* Espaçamento vertical entre os botões e rótulos */
+}
+
+.tw-follow-button, .label {
+  display: block;
+  margin: 5px 0; /* Espaçamento vertical entre os botões e rótulos */
+  border-radius: 5px;
+}
+
+
+/* Centrar sistemas de postagens*/
+
+/* Estilização para o container do sistema de postagens */
+.postas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajuste a altura conforme necessário */
+}
+
+/* Estilização para o título do sistema de postagens */
+.postas-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilização para o componente de postagem (classe .postas é adicionada ao componente) */
+.postas {
+  width: 100%;
+  max-width: 900px; /* Ajuste a largura máxima conforme necessário */
+  padding: 20px;
+  background-color: #fff;
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;*/
+  margin: 0 auto; /* Centralize horizontalmente o componente de postagem */
+}
+
+/* Centraliza o botão "Publicar" */
+.tw-follow-button {
+  margin: 10px auto;
+}
+
+
+/* Estilização para o rodapé */
+.rodape{
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  height: auto;
+  width: 11%;
+  font-size: 14px;
+  padding: 2%;
+}
+.rodape a{
+  text-decoration: none;
+  color: white;
+}
+
+.rodape p{
+  margin-bottom: 5px;
+}
+
+.rodape-div{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  margin: auto;
+  align-items: stretch;
+  padding: 60px 1px 40px 10px;
+  
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+  display: flex;
+  width: calc(100% / 4 - 20px);
+  padding: 10px;
+}
+.rodape span{
+  font-size: 20px;
+  color: white;
+}
+.rodape-direitos{
+  width: calc(100% - 20px);
+  background-color: black;
+  padding: 10px;
+  margin: 0px;
+  text-align: center;
+}
+/*mobile*/
+@media (max-width: 768px) {
+  .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+      width: calc(50% - 20px);
+      padding: 10px;
+  }
+  .rodape-div{
+      padding: 60px 0px 40px 0px;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f0f0f0; /* Cor de fundo do rodapé */
+  padding: 10px; /* Espaçamento interno do rodapé */
+  width: auto; /* Largura total da página */
+
+}
+
+/* Estilização para os rótulos no rodapé */
+.rodape label {
+  margin-right: 10px; /* Espaçamento entre os rótulos */
+}
+
+/* Estilo para o contêiner do botão */
+        .custom-file-upload {
+            display: inline-block;
+            padding: 1px 1px;
+            background-color: #ffffff;
+            color: rgb(4, 0, 0);
+            border: none;
+            border-radius: none;
+            cursor: pointer;
+            position: absolute;
+            top: 210px;
+            left: 450px;
+            z-index: 1;
+        }
+
+        /* Estilização para o campo de entrada de arquivo oculto */
+        .custom-file-upload input[type="file"] {
+            display: none;
+        }
+
