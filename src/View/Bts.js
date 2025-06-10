@@ -43,12 +43,6 @@ function Bt_inicial() {
     );
 }
 
-function Bt_lives() {
-    return (
-        <button className="tw-button">Lives</button>
-    );
-}
-
 function Bt_notes() {
     return (
         <button className="tw-button">Notificações</button>

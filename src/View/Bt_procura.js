@@ -11,7 +11,7 @@ function Bt_procura() {
 
   const handleSearch = () => {
     // Faça o que for necessário com o valor da pesquisa (searchValue)
-    console.log(`Você está procurando por: ${searchValue}`);
+    console.log(`Está a procurar por: ${searchValue}`);
   };
 
   const handleInputChange = (e) => {
@@ -30,7 +30,7 @@ function Bt_procura() {
         <div className="search-box">
           <input
             type="text"
-            placeholder="Digite sua pesquisa"
+            placeholder="Escreva a pesquisa"
             value={searchValue}
             onChange={handleInputChange}
             onKeyPress={handleEnterPress}

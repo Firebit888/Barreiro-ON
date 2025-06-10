@@ -1,7 +1,6 @@
 //Serve para lançar botões para a  main e outros para futuro
 //Coluna lado direito
 import React from "react";
-import ChatButton from "./Chat";
 import FollowButton from "./FollowButton";
 import FollowButtontwo from "./FollowButtontwo";
 import './Style.css';
@@ -18,7 +17,6 @@ export default function Btstwo() {
                 <FollowButtontwo />
                 <FollowButtontwo />
                 <FollowButtontwo />
-                <ChatButton />
             </div>
         </div>
     );
