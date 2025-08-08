@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
-import './Style.css';
+import './ExpandB.css';
 
 class Post extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      files: [], // Para armazenar os arquivos carregados
-      message: '', // Para armazenar a mensagem da postagem
+      files: [], 
+      message: '',
     };
   }
 
@@ -20,13 +20,7 @@ class Post extends Component {
   }
 
   savePost = () => {
-    // Implemente a lógica para salvar a postagem no servidor aqui
-    // Envie this.state.files, this.state.message e outros dados da postagem para o servidor
-
-    // Limpe o estado após salvar
     this.setState({ files: [], message: '' });
-
-    // Chame a função de retorno para enviar a postagem ao componente pai
     this.props.onAddPost({ message: this.state.message, files: this.state.files });
   }
 
@@ -35,44 +29,52 @@ class Post extends Component {
     updatedFiles.splice(index, 1);
     this.setState({ files: updatedFiles });
   }
-
+  
   render() {
     return (
       <div>
         <h2 className='vinda'>O Barreiro está mais ON que nunca!</h2>
-        <textarea
-          className='rounded-textbox'
-          value={this.state.message}
-          onChange={this.handleTextChange}
-          placeholder="Escreva sua postagem"
-        />
-        <Dropzone onDrop={this.handleDrop}>
-          {({ getRootProps, getInputProps }) => (
-            <div {...getRootProps()} className="dropzone">
-              <input {...getInputProps()} />
-              <label className="custom-file-upload">
-                <input type="file" />
-                Inserir Arquivo
-              </label>
+        
+        {/* === ADICIONAR ESTE NOVO CONTAINER === */}
+        <div className="post-input-container">
+          <textarea
+            className='rounded-textbox'
+            value={this.state.message}
+            onChange={this.handleTextChange}
+            placeholder="Escreva sua postagem"
+          />
+          {/* O seu botão já está aqui, não é preciso mudar nada dentro dele */}
+          <div className="expandable-button-container">
+            <button className="main-button">P</button>
+            <div className="sub-buttons">
+              <button className='bt_post' onClick={this.savePost}>Publicar</button>
+              <Dropzone onDrop={this.handleDrop}>
+                {({ getRootProps, getInputProps }) => (
+                  <div {...getRootProps()} className="dropzone-area">
+                    <input {...getInputProps()} />
+                    <button className='bt_insert'>Inserir Arquivo</button>
+                  </div>
+                )}
+              </Dropzone>
             </div>
-          )}
-        </Dropzone>
+          </div>
+        </div>
+        {/* === FIM DO NOVO CONTAINER === */}
+
+        {/* ... (O restante do seu código JSX, que lida com a exibição dos ficheiros, permanece igual) */}
         <ul>
           {this.state.files.map((file, index) => (
             <p key={index}>
               <span className='file-info'>
-                
                 <button className='delete-button' onClick={() => this.deleteFile(index)}>Excluir</button>
                 <br />
                 {file.type.startsWith('image/') && (
                   <img
                     src={URL.createObjectURL(file)}
                     alt="Imagem"
-                    // Remova a classe post-image
                     style={{ maxWidth: '70%', height: 'auto', display: 'block', margin: '10px auto' }}
                   />
                 )}
-
                 {file.type.startsWith('video/') && (
                   <video
                     controls
@@ -101,7 +103,6 @@ class Post extends Component {
             </p>
           ))}
         </ul>
-        <button className='bt_post' onClick={this.savePost}>Publicar</button>
       </div>
     );
   }
