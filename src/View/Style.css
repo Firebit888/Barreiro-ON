@@ -1,27 +1,26 @@
 .barreiro-on {
-    font-family: 'Garamond', serif;
-    font-size: 36px;
-    color: red; /* Cor do texto vermelho */
-    -webkit-text-stroke: 2px black; /* Contorno preto de 2 pixels */
-    text-stroke: 2px black; /* Contorno preto de 2 pixels */
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 999; /* Garante que o logotipo fique acima de outros elementos */
-  }
-
-  /* Defina a cor de fundo e a cor do texto para o botão */
-  .tw-button {
-    background-color: #ffffff; /* Cor de fundo azul do Twitter */
-    color: rgb(11, 0, 0); /* Cor do texto branca */
-    border: none;
-    border-radius: 999px; /* Cria uma forma arredondada para o botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    font-size: 16px;
-    cursor: pointer;
-    width: 250px; /* Adicione o tamanho desejado */
+  font-family: 'Garamond', serif;
+  font-size: 36px;
+  color: red;
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px black;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
 }
-  
+
+.tw-button {
+  background-color: #ffffff;
+  color: rgb(11, 0, 0);
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 250px;
+}
+
 .bt_post {
   background-color: #272197;
   color: rgb(255, 255, 255);
@@ -30,82 +29,64 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  position: fixed; /* Alterado para relativo */
-  top: 175px; /* Ajuste conforme necessário */
-  left: 420px; /* Ajuste conforme necessário */
+  margin-top: 10px;
+  margin-bottom: 20px;
+  position: relative;
   z-index: 1;
+  text-align: center;
 }
 
-  .bt_post:hover {
-    background-color: #0c364d; /* Cor de fundo azul mais escura no hover */
-    color: #ffffff;
-  }
-  
-  /* Estilize o botão quando ele for clicado */
-  .bt_post:active {
-    background-color: #05111b; /* Cor de fundo azul mais escura no clique */
-  }
+.bt_post:hover {
+  background-color: #0c364d;
+  color: #ffffff;
+}
 
-  /* Estilize o botão quando o mouse passar sobre ele */
-  .tw-button:hover {
-    background-color: #0c364d; /* Cor de fundo azul mais escura no hover */
-    color: #ffffff;
-  }
-  
-  /* Estilize o botão quando ele for clicado */
-  .tw-button:active {
-    background-color: #05111b; /* Cor de fundo azul mais escura no clique */
-  }
+.bt_post:active {
+  background-color: #05111b;
+}
 
-  /* Estilize o botão de chat */
+.tw-button:hover {
+  background-color: #0c364d;
+  color: #ffffff;
+}
+
+.tw-button:active {
+  background-color: #05111b;
+}
+
 .chat-button {
-    background-color: white; /* Cor de fundo branca */
-    color: black; /* Cor do texto preta */
-    border: none;
-    border-radius: 50%; /* Cria uma forma circular para o botão */
-    padding: 20px; /* Espaçamento interno do botão */
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.3s; /* Adiciona uma transição suave de 0.3 segundos para a animação */
-  }
-  
-  /* Estilize o botão quando o mouse passar sobre ele */
-  .chat-button:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% no hover */
-  }
-  
-/* Estilize o botão de "Seguir" */
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.chat-button:hover {
+  transform: scale(1.1);
+}
+
 .tw-follow-button {
-    background-color: #888; /* Cor de fundo cinza inicial */
-    color: white; /* Cor do texto branca */
-    border: none;
-    border-radius: 0; /* Inicialmente reto (não arredondado) */
-    padding: 2px 4px; /* Tamanho do botão pequeno */
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-radius 0.3s; /* Adiciona uma transição suave de 0.3 segundos para a mudança de cor e arredondamento */
-    margin: 10px auto;
-  }
-  
-  /* Estilize o botão quando o mouse passar sobre ele */
-  .tw-follow-button:hover {
-    background-color: #aea0a0; /* Cor de fundo vermelho no hover */
-  }
-  
-/*Botão de procura*/
+  background-color: #888;
+  color: white;
+  border: none;
+  border-radius: 0;
+  padding: 2px 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-radius 0.3s;
+  margin: 10px auto;
+}
+
+.tw-follow-button:hover {
+  background-color: #aea0a0;
+}
 
 .search-container {
   display: inline-block;
-}
-
-.tw-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .search-box {
@@ -139,24 +120,20 @@ input {
   background-color: #1a5d93;
 }
 
-
-/*Para textbox de publicar*/
 .rounded-textbox {
   border: 1px solid #ccc;
-  border-radius: 10px; /* Ajuste o valor conforme necessário para controlar o grau de arredondamento */
+  border-radius: 10px;
   padding: 10px;
-  width: 500px; /* Ajuste a largura conforme necessário */
+  width: 500px;
   outline: none;
-  resize: none; /* Desativa o redimensionamento da caixa de texto */
-  position: fixed;
-  left: 420px;
+  resize: none;
+  margin-top: 20px;
+  position: relative;
 }
 
-
-/* Coluna esquerda e para direita*/
 .container {
   display: flex;
-  justify-content: space-between; /* Espaço entre as colunas */
+  justify-content: space-between;
 }
 
 .left-column {
@@ -164,9 +141,8 @@ input {
   float: left;
   background-color: #1a5d93;
   position: fixed;
-  top: 200px;
-  left: 1px;
   top: 100px;
+  left: 1px;
 }
 
 .center-column {
@@ -180,9 +156,8 @@ input {
   top: 100px;
   overflow-y: auto;
   max-height: calc(100vh - 120px);
-  padding: 20px; /* Adiciona algum espaço interno para o conteúdo */
+  padding: 20px;
 }
-
 
 .right-column {
   width: 22%;
@@ -193,55 +168,69 @@ input {
   top: 100px;
 }
 
-/* Estilização para os botões */
 .tw-button, .label {
   display: block;
-  margin: 5px 0; /* Espaçamento vertical entre os botões e rótulos */
+  margin: 5px 0;
 }
 
 .tw-follow-button, .label {
   display: block;
-  margin: 5px 0; /* Espaçamento vertical entre os botões e rótulos */
+  margin: 5px 0;
   border-radius: 5px;
 }
 
+/* Publicação */
 
-/* Centrar sistemas de postagens*/
-
-/* Estilização para o container do sistema de postagens */
 .postas-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh; /* Ajuste a altura conforme necessário */
+  justify-content: flex-start;
+  padding-top: 40px;
 }
 
-/* Estilização para o título do sistema de postagens */
 .postas-title {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-/* Estilização para o componente de postagem (classe .postas é adicionada ao componente) */
 .postas {
   width: 100%;
-  max-width: 900px; /* Ajuste a largura máxima conforme necessário */
+  max-width: 900px;
   padding: 20px;
   background-color: #fff;
-  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;*/
-  margin: 0 auto; /* Centralize horizontalmente o componente de postagem */
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Centraliza o botão "Publicar" */
-.tw-follow-button {
-  margin: 10px auto;
+/* Agrupamento dos botões */
+.acoes-postagem {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Inserir Arquivo */
+.custom-file-upload {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+}
 
-/* Estilização para o rodapé */
-.rodape{
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+/* Rodapé */
+.rodape {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   height: auto;
@@ -249,52 +238,61 @@ input {
   font-size: 14px;
   padding: 2%;
   position: fixed;
-  top: 200px;
-  left: -20px;
   top: 645px;
+  left: -20px;
 }
-.rodape a{
+
+.rodape a {
   text-decoration: none;
   color: white;
 }
 
-.rodape p{
+.rodape p {
   margin-bottom: 5px;
 }
 
-.rodape-div{
+.rodape-div {
   display: flex;
   flex-wrap: wrap;
-  width:100%;
+  width: 100%;
   margin: auto;
   align-items: stretch;
   padding: 60px 1px 40px 10px;
-  
 }
-.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+
+.rodape-div-1,
+.rodape-div-2,
+.rodape-div-3,
+.rodape-div-4 {
   display: flex;
   width: calc(100% / 4 - 20px);
   padding: 10px;
 }
-.rodape span{
+
+.rodape span {
   font-size: 20px;
   color: white;
 }
-.rodape-direitos{
+
+.rodape-direitos {
   width: calc(100% - 20px);
   background-color: black;
   padding: 10px;
   margin: 0px;
   text-align: center;
 }
-/*mobile*/
+
 @media (max-width: 768px) {
-  .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
-      width: calc(50% - 20px);
-      padding: 10px;
+  .rodape-div-1,
+  .rodape-div-2,
+  .rodape-div-3,
+  .rodape-div-4 {
+    width: calc(50% - 20px);
+    padding: 10px;
   }
-  .rodape-div{
-      padding: 60px 0px 40px 0px;
+
+  .rodape-div {
+    padding: 60px 0px 40px 0px;
   }
 }
 
@@ -302,42 +300,15 @@ input {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #f0f0f0; /* Cor de fundo do rodapé */
-  padding: 10px; /* Espaçamento interno do rodapé */
-  width: auto; /* Largura total da página */
-
+  background-color: #f0f0f0;
+  padding: 10px;
+  width: auto;
 }
 
-/* Estilização para os rótulos no rodapé */
 .rodape label {
-  margin-right: 10px; /* Espaçamento entre os rótulos */
+  margin-right: 10px;
 }
 
-/* Estilização para o contêiner do botão de upload */
-.custom-file-upload {
-  display: inline-block;
-  padding: 1px 1px;
-  background-color: #ffffff;
-  color: rgb(4, 0, 0);
-  border: none;
-  border-radius: none;
-  cursor: pointer;
-  position: fixed;
-  top: 175px;
-  left: 840px;
-  z-index: 1;
-}
-
- /* Estilização para o campo de entrada de arquivo oculto */
-.custom-file-upload input[type="file"] {
-  display: none;
-}
-
-
-
-/* Seu arquivo de estilo global ou local */
-
-/* Estilização para o botão de exclusão */
 .delete-button {
   background-color: red;
   color: white;
@@ -345,20 +316,19 @@ input {
   border-radius: 4px;
   padding: 4px 8px;
   cursor: pointer;
-  margin-left: 10px; /* Adicione margem à esquerda para separar do nome do arquivo */
-  position:fixed;
+  margin-left: 10px;
+  position: fixed;
   top: 280px;
 }
 
-/* Estilização para as imagens e vídeos dentro da classe file-info */
 .file-info img,
 .file-info video {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 10px auto;
-  position: relative; /* Remova a propriedade 'position: relative;' */
-  top: 100px; /* Remova essa propriedade ou ajuste conforme necessário */
+  position: relative;
+  top: 100px;
 }
 
 .vinda {
@@ -366,3 +336,4 @@ input {
   top: 50px;
   left: 480px;
 }
+
