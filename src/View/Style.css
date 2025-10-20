@@ -29,9 +29,10 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 75px;
   margin-bottom: 20px;
-  position: relative;
+  margin-inline-start: -12%;
+  position: fixed;
   z-index: 1;
   text-align: center;
 }
@@ -126,7 +127,8 @@ input {
   padding: 10px;
   width: 500px;
   margin-top: 20px;
-  position: fixed;
+  margin-inline-start: -20%;
+  position: absolute;
 }
 
 .container {
@@ -315,7 +317,6 @@ input {
   padding: 4px 8px;
   cursor: pointer;
   margin-left: 10px;
-  position: fixed;
   top: 280px;
 }
 
@@ -325,12 +326,11 @@ input {
   height: auto;
   display: block;
   margin: 10px auto;
-  position: relative;
+  position: none;
   top: 100px;
 }
 
 .vinda {
-  position: fixed;
   top: 50px;
   left: 480px;
 }
