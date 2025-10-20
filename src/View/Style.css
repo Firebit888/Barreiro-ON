@@ -125,10 +125,8 @@ input {
   border-radius: 10px;
   padding: 10px;
   width: 500px;
-  outline: none;
-  resize: none;
   margin-top: 20px;
-  position: relative;
+  position: fixed;
 }
 
 .container {

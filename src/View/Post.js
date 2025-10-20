@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
-import './ExpandB.css';
+
 
 class Post extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class Post extends Component {
           />
           {/* O seu botão já está aqui, não é preciso mudar nada dentro dele */}
           <div className="expandable-button-container">
-            <button className="main-button">P</button>
+            
             <div className="sub-buttons">
               <button className='bt_post' onClick={this.savePost}>Publicar</button>
               <Dropzone onDrop={this.handleDrop}>
