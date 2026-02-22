@@ -23,6 +23,12 @@ A digital platform created to promote local initiatives, events, and services in
 
 ---
 
+🛠️ The project is still under development and currently in the creation phase.
+
+🔄 Updates and improvements will be added as the structure evolves.
+
+---
+
 🚀 How to Run Locally
 
 ```bash
