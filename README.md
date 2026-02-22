@@ -1,27 +1,23 @@
-# 🚀 Barreiro-ON
+🚀 Barreiro-ON
 
-Plataforma digital para promover iniciativas locais, eventos e serviços na cidade do Barreiro, contudo também pode transformar o protal a sua imagem.
+A digital platform created to promote local initiatives, events, and services in the city of Barreiro. The portal can also be customized and adapted to match your brand identity.
 
-![Barreiro-ON Banner](https://link-da-sua-imagem.com/banner.png)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/seu-usuario/Barreiro-ON)](https://github.com/seu-usuario/Barreiro-ON/stargazers)
 
----
 
-## ✨ Funcionalidades
+✨ Features
 
-- 📍 Listagem de eventos e serviços locais
-- 🗺️ Mapa interativo com localização
-- 💬 Sistema de comentários e avaliações
-- ➕ Sistema de follow
-- 📱 Layout responsivo
+📍 Local events and services listing
 
----
+🗺️ Interactive map with location display
 
-## 🚀 Como executar localmente
+💬 Comment and review system
 
-```bash
+➕ Follow system
+
+📱 Fully responsive layout
+
+🚀 How to Run Locally
 git clone https://github.com/seu-usuario/Barreiro-ON.git
 cd Barreiro-ON
 npm install
